@@ -1,0 +1,11 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(curl -s -o /tmp/prod.html -w \"HTTP %{http_code}\\\\n\" http://localhost:3000/)",
+      "Bash(curl -s -o /dev/null -w \"media HTTP %{http_code}\\\\n\" http://localhost:3000/media/hero-paris.mp4)",
+      "Bash(curl -s -o /dev/null -w \"favicon HTTP %{http_code}\\\\n\" http://localhost:3000/favicon.svg)",
+      "Bash(git add *)",
+      "Bash(curl -s -A \"Mozilla/5.0 \\(iPhone; CPU iPhone OS 17_0 like Mac OS X\\)\" -o /tmp/mobile.html -w \"HTTP %{http_code}\\\\n\" http://localhost:3000/)"
+    ]
+  }
+}
